@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'alta-corredor',
+    loadChildren: () => import('./alta-corredor/alta-corredor.module').then( m => m.AltaCorredorPageModule)
+  },
+  {
+    path: 'listado-corredores',
+    loadChildren: () => import('./listado-corredores/listado-corredores.module').then( m => m.ListadoCorredoresPageModule)
+  },
 ];
 
 @NgModule({
